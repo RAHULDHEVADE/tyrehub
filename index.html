@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TyreHub is a polished demo tyre ecommerce portfolio application.">
+  <title>TyreHub — Smart Tyre Shopping</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="home">
+  <section id="tyrehub-intro" class="tyrehub-intro" aria-label="TyreHub introduction">
+    <div class="tyrehub-intro__stage">
+      <video id="tyrehub-intro-video" class="tyrehub-intro__video" autoplay muted playsinline preload="auto" poster="assets/intro/tyrehub-intro-final.jpg" aria-label="TyreHub intro animation">
+        <source src="assets/intro/tyrehub-intro.mp4" type="video/mp4">
+      </video>
+      <button id="tyrehub-intro-tyre" class="tyrehub-intro__hotspot" type="button" aria-label="Click the tyre to enter TyreHub"></button>
+      <p id="tyrehub-intro-status" class="tyrehub-intro__status" aria-live="polite"></p>
+    </div>
+  </section>
+  <a class="skip-link" href="#main-content">Skip to content</a><div id="site-header"></div>
+  <main id="main-content">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__shade"></div><div class="container hero__content">
+        <p class="eyebrow light">Better tyres <i></i> safer roads <i></i> brighter tomorrows</p>
+        <h1 id="hero-title">The right tyre<br>for <span>every journey</span></h1>
+        <p class="hero__lead">Performance. Safety. Comfort. All in one place.</p>
+        <div class="hero__actions"><a class="button" href="#tyre-finder">Find My Tyre <b>→</b></a><a class="button button--ghost" href="shop.html">Shop All Tyres <b>→</b></a></div>
+        <div class="trust-row" aria-label="TyreHub commitments">
+          <div><span data-icon="shield"></span><p><b>Trusted brands</b><small>100% genuine</small></p></div>
+          <div><span data-icon="truck"></span><p><b>Fast & reliable</b><small>At your doorstep</small></p></div>
+          <div><span data-icon="headphones"></span><p><b>Expert support</b><small>Always here</small></p></div>
+          <div><span data-icon="leaf"></span><p><b>A greener tomorrow</b><small>Drive responsible</small></p></div>
+        </div>
+      </div>
+    </section>
+    <section class="finder-wrap" id="tyre-finder" aria-labelledby="finder-title">
+      <div class="finder container">
+        <div class="finder__heading"><span class="wheel-mark" aria-hidden="true"></span><div><h2 id="finder-title">Find Your Perfect Tyre</h2><p>Select your vehicle and preferences to get the best recommendations.</p></div></div>
+        <div class="finder-tabs" role="tablist" aria-label="Tyre finder modes">
+          <button class="active" role="tab" data-finder-tab="vehicle">By Vehicle</button><button role="tab" data-finder-tab="size">By Size</button><button role="tab" data-finder-tab="brand">By Brand</button><button role="tab" data-finder-tab="budget">By Budget</button>
+        </div>
+        <form id="finder-form" class="finder__form">
+          <label class="finder-field vehicle-field">Vehicle Type<select name="vehicle"><option value="">Any vehicle</option><option>Car</option><option>Bike</option><option>SUV</option><option>Commercial</option></select></label>
+          <label class="finder-field brand-field">Brand<select name="brand"><option value="">Any brand</option><option>MRF</option><option>CEAT</option><option>Apollo</option><option>Michelin</option><option>Bridgestone</option><option>Goodyear</option><option>Yokohama</option><option>Continental</option></select></label>
+          <label class="finder-field size-field">Tyre Width<input name="width" inputmode="numeric" placeholder="e.g. 205"></label>
+          <label class="finder-field size-field">Profile<input name="profile" inputmode="numeric" placeholder="e.g. 55"></label>
+          <label class="finder-field size-field">Rim Size<input name="rim" inputmode="numeric" placeholder="e.g. 16"></label>
+          <label class="finder-field budget-field">Max Budget (₹)<input name="maxPrice" inputmode="numeric" placeholder="e.g. 9000"></label>
+          <button class="button finder-submit" type="submit">Find Tyres <b>→</b></button>
+        </form>
+      </div>
+    </section>
+    <section class="section container" aria-labelledby="vehicle-heading">
+      <div class="section-heading"><div><p class="eyebrow">Find your fit</p><h2 id="vehicle-heading">Shop by Vehicle</h2></div><a href="shop.html" class="text-link">View all <b>→</b></a></div>
+      <div class="vehicle-grid">
+        <a class="vehicle-card vehicle-card--car" href="shop.html?vehicle=Car"><div class="vehicle-icon"><img src="assets/vehicles/car.png" alt="Car"></div><div><h3>Car Tyres</h3><p>Hatchback, Sedan, MUV</p></div><b class="round-arrow">→</b></a>
+        <a class="vehicle-card vehicle-card--bike" href="shop.html?vehicle=Bike"><div class="vehicle-icon"><img src="assets/vehicles/bike.png" alt="Bike"></div><div><h3>Bike Tyres</h3><p>Commuter, Sports, Cruiser</p></div><b class="round-arrow">→</b></a>
+        <a class="vehicle-card vehicle-card--suv" href="shop.html?vehicle=SUV"><div class="vehicle-icon"><img src="assets/vehicles/suv.png" alt="SUV"></div><div><h3>SUV Tyres</h3><p>4×4, Off-road, Premium</p></div><b class="round-arrow">→</b></a>
+        <a class="vehicle-card vehicle-card--truck" href="shop.html?vehicle=Commercial"><div class="vehicle-icon"><img src="assets/vehicles/truck.png" alt="Commercial truck"></div><div><h3>Commercial Tyres</h3><p>Light & heavy vehicles</p></div><b class="round-arrow">→</b></a>
+      </div>
+    </section>
+    <section class="section section--compact container" aria-labelledby="brands-heading">
+      <div class="section-heading"><div><p class="eyebrow">Brands you trust</p><h2 id="brands-heading">Popular Brands</h2></div><a href="shop.html" class="text-link">View all brands <b>→</b></a></div>
+      <div class="brand-row" id="brand-row"></div>
+    </section>
+    <section class="section why-section container" aria-labelledby="why-heading">
+      <div class="section-heading"><div><p class="eyebrow">The TyreHub difference</p><h2 id="why-heading">Why Choose TyreHub?</h2></div><a href="about.html" class="text-link">More about us <b>→</b></a></div>
+      <div class="benefits-row">
+        <article class="benefit"><span data-icon="shield"></span><h3>100% Genuine Products</h3><p>Original tyres from trusted brands.</p></article>
+        <article class="benefit"><span data-icon="badge"></span><h3>Best Prices Guaranteed</h3><p>Get premium tyres at the best value.</p></article>
+        <article class="benefit"><span data-icon="truck"></span><h3>Fast & Reliable Delivery</h3><p>Your tyres, at your doorstep.</p></article>
+        <article class="benefit"><span data-icon="headphones"></span><h3>Expert Support Always Here</h3><p>Real people. Real guidance.</p></article>
+      </div>
+    </section>
+    <section class="engineered"><div class="container engineered__inner"><div><p class="eyebrow light">Engineered for</p><h2>A better tomorrow</h2><p>From city streets to mountain roads, TyreHub keeps you moving with confidence.</p><a class="button button--light" href="shop.html">Explore Tyres <b>→</b></a></div><ul><li><span data-icon="spark"></span>Superior grip</li><li><span data-icon="shield"></span>All-weather performance</li><li><span data-icon="gauge"></span>Longer tyre life</li><li><span data-icon="leaf"></span>Fuel efficient</li></ul></div></section>
+    <section class="section container reviews-section" aria-labelledby="review-heading">
+      <div class="section-heading"><div><p class="eyebrow">Real words, demo reviews</p><h2 id="review-heading">What Our Customers Say</h2></div><a href="#review-heading" class="text-link" data-demo-toast="These are illustrative demo reviews.">View all reviews <b>→</b></a></div>
+      <div class="reviews-row">
+        <article class="review-card"><div class="avatar">RS</div><div><div class="stars">★★★★★</div><p>“Great experience! Genuine products and fast delivery.”</p><h3>Rohit S.</h3><small>Mumbai · Demo review</small></div></article>
+        <article class="review-card"><div class="avatar avatar--blue">PM</div><div><div class="stars">★★★★★</div><p>“Best prices and amazing support. Found the right tyres for my SUV.”</p><h3>Priya M.</h3><small>Thane · Demo review</small></div></article>
+        <article class="review-card"><div class="avatar avatar--dark">KD</div><div><div class="stars">★★★★★</div><p>“Smooth shopping experience. Tyres delivered on time.”</p><h3>Karan D.</h3><small>Navi Mumbai · Demo review</small></div></article>
+      </div>
+    </section>
+    <section class="newsletter container"><div><p class="eyebrow light">Good roads ahead</p><h2>Stay in the loop</h2><p>Get the latest offers, new arrivals and tyre tips.</p></div><form id="newsletter-form"><label class="sr-only" for="newsletter-email">Email address</label><input id="newsletter-email" type="email" required placeholder="Enter your email address"><button class="button" type="submit">Subscribe <b>→</b></button></form><p id="newsletter-message" class="form-message" aria-live="polite"></p></section>
+  </main><div id="site-footer"></div><div id="toast" role="status" aria-live="polite"></div>
+  <script src="js/data.js"></script><script src="js/app.js"></script><script src="js/home.js"></script>
+  <script src="js/intro.js"></script>
+</body></html>
